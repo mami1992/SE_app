@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6つのSEボタン</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <h1>🎵 SEボタンアプリ（6音）</h1>
+  <div class="button-container">
+    <button data-sound="kirakomesalada.mp3">キラコメ１</button>
+    <button data-sound="kirakomesalada2.mp3">キラコメ２</button>
+    <button data-sound="patison.mp3">パチソン１</button>
+    <button data-sound="patison2.mp3">パチソン２</button>
+    <button data-sound="SE.mp3">SE１</button>
+    <button data-sound="SE2.mp3">SE２</button>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    // PWA登録
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker 登録完了'))
+        .catch(err => console.log('SWエラー:', err));
+    }
+  </script>
+</body>
+</html>
